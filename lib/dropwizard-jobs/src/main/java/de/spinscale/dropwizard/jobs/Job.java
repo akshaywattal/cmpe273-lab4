@@ -15,7 +15,6 @@ public abstract class Job implements org.quartz.Job {
         timer = Metrics.defaultRegistry().newTimer(getClass(), getClass().getName());
     }
 
-    @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
         TimerContext timerContext = timer.time();
         try {

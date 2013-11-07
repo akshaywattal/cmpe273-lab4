@@ -72,7 +72,7 @@ public class BookResource {
     }
 
     @GET
-    @Path("/")
+  //  @Path("/")
     @Timed(name = "view-all-books")
     public BooksDto getAllBooks() {
 	BooksDto booksResponse = new BooksDto(bookRepository.getAllBooks());
